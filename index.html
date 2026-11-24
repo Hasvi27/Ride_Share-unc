@@ -1,0 +1,72 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Ride Board</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-current="page">Ride Board</a>
+    <nav aria-label="Main">
+      <a href="trips.html">Trips</a>
+      <a href="post.html">Post a trip</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
+    <button id="theme" class="btn ghost small" type="button" aria-pressed="false">Dark theme</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">For students without a car</p>
+      <h1 id="hero-title">Going off campus without a car? Find who's already going.</h1>
+      <p class="lede">Post the trip you're making. Students heading the same way can ride along, and the group splits one fare.</p>
+      <div class="actions">
+        <a class="btn" href="trips.html">See upcoming trips</a>
+        <a class="btn ghost" href="post.html">Post a trip</a>
+      </div>
+      <ul class="facts">
+        <li>Free to use</li>
+        <li>unc.edu email required</li>
+        <li>No drivers, no payments</li>
+      </ul>
+    </div>
+
+    <form class="calc" id="calc" aria-labelledby="calc-title">
+      <h2 id="calc-title">Split a fare</h2>
+      <div class="field">
+        <div class="calc-row">
+          <label for="fare">Solo fare</label>
+          <output id="fare-out" class="mono" for="fare">$40</output>
+        </div>
+        <input type="range" id="fare" min="10" max="200" step="5" value="40">
+      </div>
+      <div class="field">
+        <label for="riders">People in the ride</label>
+        <select id="riders">
+          <option value="2">2 people</option>
+          <option value="3" selected>3 people</option>
+          <option value="4">4 people</option>
+        </select>
+      </div>
+      <p class="calc-result" id="calc-out" aria-live="polite"></p>
+      <p class="fine">An estimate. Check Uber or Lyft for the real price at your time.</p>
+    </form>
+  </section>
+
+  <section class="wrap band" aria-labelledby="preview-title">
+    <div class="section-head">
+      <h2 id="preview-title">Next trips</h2>
+      <a href="trips.html">All trips</a>
+    </div>
+    <ul class="board" id="preview-list"></ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</div>
+</footer>
+
+<script src="app.js"></script>

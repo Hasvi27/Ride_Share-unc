@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ride Board Post Trip</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Ride Board</a>
+    <nav aria-label="Main">
+      <a href="trips.html">Trips</a>
+      <a href="post.html" aria-current="page">Post a trip</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
+    <button id="theme" class="btn ghost small" type="button" aria-pressed="false">Dark theme</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap band" aria-labelledby="post-title" style="border-top:0; padding-top:48px">
+    <div class="post-grid">
+      <div>
+        <h1 id="post-title" style="font-size:clamp(2rem,4.5vw,3rem)">Post a trip</h1>
+        <p class="muted">Takes about a minute. Only unc.edu addresses can post in this prototype.</p>
+      </div>
+      <form id="post-form" novalidate>
+        <div class="two">
+          <div class="field">
+            <label for="to">Where to</label>
+            <select id="to" required></select>
+            <p class="error" id="err-to" hidden></p>
+          </div>
+          <div class="field">
+            <label for="from">Leaving from</label>
+            <select id="from" required></select>
+            <p class="error" id="err-from" hidden></p>
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+            <p class="error" id="err-date" hidden></p>
+          </div>
+          <div class="field">
+            <label for="time">Leave by</label>
+            <input type="time" id="time" required>
+            <p class="error" id="err-time" hidden></p>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend>People in the ride, including you</legend>
+          <div class="radios">
+            <label><input type="radio" name="spots" value="2" checked> 2</label>
+            <label><input type="radio" name="spots" value="3"> 3</label>
+            <label><input type="radio" name="spots" value="4"> 4</label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <div class="field">
+            <label for="fare-post">Estimated solo fare, in dollars</label>
+            <input type="number" id="fare-post" min="1" max="500" step="1" inputmode="numeric">
+            <p class="hint">Check Uber or Lyft for your time.</p>
+            <p class="error" id="err-fare" hidden></p>
+          </div>
+          <div class="field">
+            <label for="name">First name</label>
+            <input type="text" id="name" autocomplete="given-name" maxlength="40">
+            <p class="error" id="err-name" hidden></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">UNC email</label>
+          <input type="email" id="email" autocomplete="email" placeholder="you@unc.edu">
+          <p class="hint">Only unc.edu addresses are accepted. The address is not stored or shown.</p>
+          <p class="error" id="err-email" hidden></p>
+        </div>
+        <div class="field">
+          <label for="meet">Exact pickup spot</label>
+          <input type="text" id="meet" maxlength="120" placeholder="Front steps, Lenoir Hall">
+          <p class="hint">Only students who send a ride-along request see this.</p>
+          <p class="error" id="err-meet" hidden></p>
+        </div>
+        <div class="field">
+          <label for="note">Note, optional</label>
+          <textarea id="note" maxlength="140" placeholder="Bags, pickup spot, time flexibility"></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit">Post trip</button>
+        </div>
+        <p id="post-status" class="status" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

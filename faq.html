@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ride Board FAQs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Ride Board</a>
+    <nav aria-label="Main">
+      <a href="trips.html">Trips</a>
+      <a href="post.html">Post a trip</a>
+      <a href="faq.html" aria-current="page">FAQs</a>
+    </nav>
+    <button id="theme" class="btn ghost small" type="button" aria-pressed="false">Dark theme</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap band" aria-labelledby="faq-title" style="border-top:0; padding-top:48px">
+    <h1 id="faq-title" style="font-size:clamp(2rem,4.5vw,3rem)">FAQs</h1>
+    <div class="faq" style="margin-top:24px">
+      <details>
+        <summary>Does it cost anything?</summary>
+        <p>No. The site is free. The only cost is the ride itself, which the group splits.</p>
+      </details>
+      <details>
+        <summary>Does it book the ride or handle money?</summary>
+        <p>No. It does not provide drivers, rides, or payments. One person books the ride in their own app, and everyone pays their share directly.</p>
+      </details>
+      <details>
+        <summary>What if nobody joins my trip?</summary>
+        <p>Take the ride alone or change your plans. Nothing is charged or cancelled automatically.</p>
+      </details>
+      <details>
+        <summary>Who can see my email?</summary>
+        <p>This prototype does not store or show your email. It only checks that the domain ends in unc.edu.</p>
+      </details>
+      <details>
+        <summary>Can someone without a UNC email post?</summary>
+        <p>Not in this version. The domain check is the only verification built so far, so it does not confirm who is behind an address.</p>
+      </details>
+      <details>
+        <summary>Is it safe to ride with someone I don't know?</summary>
+        <p>Meet at the pickup spot you picked, tell a friend the trip details, and skip any ride that feels wrong.</p>
+      </details>
+      <details>
+        <summary>When do I find out the exact pickup spot?</summary>
+        <p>After you send a ride-along request, the exact spot shows on that trip. Before that, you see only the general area, such as Central campus.</p>
+      </details>
+      <details>
+        <summary>Is this a real service yet?</summary>
+        <p>It is a prototype. Trips and requests save only on the device you use them on.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

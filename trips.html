@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ride Board Trips</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Ride Board</a>
+    <nav aria-label="Main">
+      <a href="trips.html" aria-current="page">Trips</a>
+      <a href="post.html">Post a trip</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
+    <button id="theme" class="btn ghost small" type="button" aria-pressed="false">Dark theme</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap page-head">
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Upcoming trips</h1>
+    <p>Pick a trip and send a request to ride along. The group books one ride and splits the fare.</p>
+  </section>
+
+  <section class="wrap band" aria-labelledby="board-title" style="border-top:0; padding-top:28px">
+    <div class="section-head">
+      <h2 id="board-title" tabindex="-1" style="font-size:1.5rem">Trips</h2>
+      <p id="board-count" class="muted" aria-live="polite"></p>
+    </div>
+    <div class="board-tools">
+      <div class="chips" id="chips" role="group" aria-label="Filter by destination"></div>
+      <button id="clear-examples" class="btn ghost small" type="button" hidden>Remove example trips</button>
+    </div>
+    <div class="cols" aria-hidden="true"><span>Leaves</span><span>Trip</span><span class="r">Split</span></div>
+    <ul class="board" id="trip-list"></ul>
+    <p id="board-status" class="status" role="status" style="margin-top:14px"></p>
+    <p class="fine" style="margin-top:14px">Trips tagged Example show how the board works. They are placeholders, not real students.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</div>
+</footer>
+
+<dialog id="join" aria-labelledby="join-title">
+  <form id="join-form" novalidate>
+    <h2 id="join-title" style="font-size:1.4rem">Ride along</h2>
+    <p class="muted" id="join-trip"></p>
+    <div class="field">
+      <label for="join-name">First name</label>
+      <input type="text" id="join-name" autocomplete="given-name" maxlength="40">
+      <p class="error" id="err-join-name" hidden></p>
+    </div>
+    <div class="field">
+      <label for="join-email">UNC email</label>
+      <input type="email" id="join-email" autocomplete="email" placeholder="you@unc.edu">
+      <p class="error" id="err-join-email" hidden></p>
+    </div>
+    <div class="dialog-actions">
+      <button class="btn ghost" type="button" id="join-cancel">Cancel</button>
+      <button class="btn" type="submit">Send request</button>
+    </div>
+    <p id="join-status" class="status" role="status"></p>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
