@@ -6,7 +6,17 @@
   var THEME_KEY = "rideboard.theme";
   var JOINED_KEY = "rideboard.joined";
   var DESTS = ["RDU airport", "Southpoint mall", "Raleigh", "Durham", "Charlotte", "Other"];
-  var AREAS = ["North campus", "Central campus", "South campus", "Off campus (say so in the note)"];
+  var AREAS = [
+    "Student Union",
+    "Franklin Street (downtown)",
+    "Lenoir Dining Hall",
+    "Ram's Head Recreation Center",
+    "Kenan Stadium lot",
+    "Ehringhaus or Hinton James residence halls",
+    "Morrison residence hall",
+    "Carmichael residence hall",
+    "Off campus (say where in the note)"
+  ];
   var UNC = /^[^\s@]+@unc\.edu$/i;
   var state = { filter: "All", trips: [], joined: [] };
 
@@ -49,9 +59,9 @@
   // Storage. Every read and write is wrapped, so blocked storage only means nothing persists.
   function examples() {
     return [
-      { id: "ex1", to: "RDU airport", from: "Central campus", date: daysFromNow(2), time: "06:15", spots: 3, joined: 1, fare: 40, note: "Early flight. Small bags only.", meet: "Front steps, Lenoir Hall", example: true },
-      { id: "ex2", to: "Southpoint mall", from: "South campus", date: daysFromNow(1), time: "14:00", spots: 4, joined: 2, fare: 24, note: "Grocery run, room for bags.", meet: "Bus stop on South Road", example: true },
-      { id: "ex3", to: "Raleigh", from: "North campus", date: daysFromNow(3), time: "18:30", spots: 2, joined: 0, fare: 30, note: "Concert downtown. Back by 11.", meet: "Corner of Franklin Street and Columbia Street", example: true }
+      { id: "ex1", to: "RDU airport", from: "Student Union", date: daysFromNow(2), time: "06:15", spots: 3, joined: 1, fare: 40, note: "Early flight. Small bags only.", meet: "Front steps, Lenoir Hall", example: true },
+      { id: "ex2", to: "Southpoint mall", from: "Ram's Head Recreation Center", date: daysFromNow(1), time: "14:00", spots: 4, joined: 2, fare: 24, note: "Grocery run, room for bags.", meet: "Bus stop on South Road", example: true },
+      { id: "ex3", to: "Raleigh", from: "Franklin Street (downtown)", date: daysFromNow(3), time: "18:30", spots: 2, joined: 0, fare: 30, note: "Concert downtown. Back by 11.", meet: "Corner of Franklin Street and Columbia Street", example: true }
     ];
   }
   function loadTrips() {
