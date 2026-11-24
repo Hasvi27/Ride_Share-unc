@@ -1,44 +1,18 @@
-/* Shared styles for every page. Palette: Carolina blue and navy, with a pale blue paper tint. Type: grotesk display, plain body, mono for times. */
+/* Shared styles for every page. Palette: light only. Pale blue paper, mid Carolina-style blue accent, slate text. Type: grotesk display, plain body, mono for times. */
 :root {
-  --bg: #F4F7FA;
+  --bg: #F5F9FD;
   --surface: #FFFFFF;
-  --ink: #0F1E38;
-  --muted: #55657D;
-  --line: #D3DDE8;
-  --accent: #13294B;
+  --ink: #17324F;
+  --muted: #5B7189;
+  --line: #CFDDEA;
+  --accent: #3A7CB8;
   --accent-ink: #FFFFFF;
-  --tint: #E2EDF7;
-  --danger: #B42318;
+  --tint: #E3F0FA;
+  --danger: #C0392B;
   --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0B1628;
-    --surface: #12213A;
-    --ink: #E8F0F8;
-    --muted: #9AAEC4;
-    --line: #26395A;
-    --accent: #7BAFD4;
-    --accent-ink: #0B1628;
-    --tint: #1B3050;
-    --danger: #F4A09B;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0B1628;
-  --surface: #12213A;
-  --ink: #E8F0F8;
-  --muted: #9AAEC4;
-  --line: #26395A;
-  --accent: #7BAFD4;
-  --accent-ink: #0B1628;
-  --tint: #1B3050;
-  --danger: #F4A09B;
-  color-scheme: dark;
 }
 
 body {

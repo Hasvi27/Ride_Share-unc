@@ -3,7 +3,6 @@
   "use strict";
 
   var KEY = "rideboard.v1";
-  var THEME_KEY = "rideboard.theme";
   var JOINED_KEY = "rideboard.joined";
   var DESTS = ["RDU airport", "Southpoint mall", "Raleigh", "Durham", "Charlotte", "Other"];
   var AREAS = [
@@ -93,36 +92,6 @@
   function saveTrips() {
     try { window.localStorage.setItem(KEY, JSON.stringify(state.trips)); } catch (e) { /* keep working in memory */ }
   }
-
-  // Theme. The choice is remembered across pages.
-  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
-  function storedTheme() {
-    try {
-      var t = window.localStorage.getItem(THEME_KEY);
-      return t === "light" || t === "dark" ? t : null;
-    } catch (e) { return null; }
-  }
-  function isDark() {
-    var t = document.documentElement.getAttribute("data-theme");
-    return t ? t === "dark" : !!(mq && mq.matches);
-  }
-  function paintTheme() {
-    var b = $("#theme");
-    if (b) b.setAttribute("aria-pressed", String(isDark()));
-  }
-  var initialTheme = storedTheme();
-  if (initialTheme) document.documentElement.setAttribute("data-theme", initialTheme);
-
-  var themeButton = $("#theme");
-  if (themeButton) {
-    themeButton.addEventListener("click", function () {
-      var next = isDark() ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* not remembered */ }
-      paintTheme();
-    });
-  }
-  if (mq && mq.addEventListener) mq.addEventListener("change", paintTheme);
 
   // Trip rows, shared by the home preview and the board
   function upcoming() {
