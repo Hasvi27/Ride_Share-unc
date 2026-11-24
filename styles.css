@@ -1,14 +1,14 @@
-/* Shared styles for every page. Palette: cool paper, ink, one route green. Type: grotesk display, plain body, mono for times. */
+/* Shared styles for every page. Palette: warm paper, espresso ink, one terracotta accent. Type: grotesk display, plain body, mono for times. */
 :root {
-  --bg: #F4F6F3;
-  --surface: #FFFFFF;
-  --ink: #16201C;
-  --muted: #56655D;
-  --line: #D8DFD9;
-  --accent: #1B5A46;
-  --accent-ink: #FFFFFF;
-  --tint: #E6EEE9;
-  --danger: #A3262B;
+  --bg: #F6F1EA;
+  --surface: #FFFDF9;
+  --ink: #221B17;
+  --muted: #6E615A;
+  --line: #DDD3C7;
+  --accent: #A4472A;
+  --accent-ink: #FFFDF9;
+  --tint: #F1E5DA;
+  --danger: #B42318;
   --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -16,28 +16,28 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0E1512;
-    --surface: #15201B;
-    --ink: #E7EEE9;
-    --muted: #9DAEA5;
-    --line: #2A3932;
-    --accent: #7CC6A8;
-    --accent-ink: #0E1512;
-    --tint: #1B2B24;
-    --danger: #F08A8E;
+    --bg: #171311;
+    --surface: #201A17;
+    --ink: #F2EBE3;
+    --muted: #A89B90;
+    --line: #3A302A;
+    --accent: #E8A184;
+    --accent-ink: #171311;
+    --tint: #2E231E;
+    --danger: #F4A09B;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0E1512;
-  --surface: #15201B;
-  --ink: #E7EEE9;
-  --muted: #9DAEA5;
-  --line: #2A3932;
-  --accent: #7CC6A8;
-  --accent-ink: #0E1512;
-  --tint: #1B2B24;
-  --danger: #F08A8E;
+  --bg: #171311;
+  --surface: #201A17;
+  --ink: #F2EBE3;
+  --muted: #A89B90;
+  --line: #3A302A;
+  --accent: #E8A184;
+  --accent-ink: #171311;
+  --tint: #2E231E;
+  --danger: #F4A09B;
   color-scheme: dark;
 }
 
