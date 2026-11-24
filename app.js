@@ -12,9 +12,18 @@
     "Lenoir Dining Hall",
     "Ram's Head Recreation Center",
     "Kenan Stadium lot",
-    "Ehringhaus or Hinton James residence halls",
-    "Morrison residence hall",
+    "Aycock residence hall",
     "Carmichael residence hall",
+    "Craige residence hall",
+    "Ehringhaus residence hall",
+    "Hinton James residence hall",
+    "Koury residence hall",
+    "Lewis residence hall",
+    "Manly residence hall",
+    "Morrison residence hall",
+    "Parker residence hall",
+    "Teague residence hall",
+    "Winston residence hall",
     "Off campus (say where in the note)"
   ];
   var UNC = /^[^\s@]+@unc\.edu$/i;
