@@ -69,7 +69,10 @@
     return [
       { id: "ex1", to: "RDU airport", from: "Student Union", date: daysFromNow(2), time: "06:15", spots: 3, joined: 1, fare: 40, note: "Early flight. Small bags only.", meet: "Front steps, Lenoir Hall", example: true },
       { id: "ex2", to: "Southpoint mall", from: "Ram's Head Recreation Center", date: daysFromNow(1), time: "14:00", spots: 4, joined: 2, fare: 24, note: "Grocery run, room for bags.", meet: "Bus stop on South Road", example: true },
-      { id: "ex3", to: "Raleigh", from: "Franklin Street (downtown)", date: daysFromNow(3), time: "18:30", spots: 2, joined: 0, fare: 30, note: "Concert downtown. Back by 11.", meet: "Corner of Franklin Street and Columbia Street", example: true }
+      { id: "ex3", to: "Raleigh", from: "Franklin Street (downtown)", date: daysFromNow(3), time: "18:30", spots: 2, joined: 0, fare: 30, note: "Concert downtown. Back by 11.", meet: "Corner of Franklin Street and Columbia Street", example: true },
+      { id: "ex4", to: "Charlotte", from: "Koury residence hall", date: daysFromNow(5), time: "08:00", spots: 4, joined: 1, fare: 85, note: "Weekend visit. Bags fit in the trunk.", meet: "Koury front lot", example: true },
+      { id: "ex5", to: "Durham", from: "Student Union", date: daysFromNow(1), time: "16:30", spots: 3, joined: 1, fare: 18, note: "Medical appointment, back same day.", meet: "Student Union bus stop", example: true },
+      { id: "ex6", to: "Southpoint mall", from: "Morrison residence hall", date: daysFromNow(4), time: "11:00", spots: 4, joined: 2, fare: 28, note: "Shopping. Room for returns.", meet: "Morrison loading area", example: true }
     ];
   }
   function loadTrips() {
