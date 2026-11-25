@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="Ride Board helps UNC students without cars find someone heading the same way, and split one fare.">
-  <title>Ride Board</title>
+  <meta name="description" content="Ride Share helps UNC students without cars find someone leaving at the same time, and split one fare.">
+  <title>Ride Share</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,155 +15,57 @@
 
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="index.html" aria-current="page">Ride Board</a>
+    <a class="brand" href="index.html" aria-current="page">Ride Share</a>
     <nav aria-label="Main">
-      <a href="#how">How it works</a>
       <a href="trips.html">Trips</a>
       <a href="post.html">Post a trip</a>
+      <a href="how.html">How it works</a>
       <a href="faq.html">FAQs</a>
+      <a href="founders.html">Know your founders</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- Hero -->
-  <section class="wrap hero" aria-labelledby="hero-title">
-    <div class="hero-copy reveal">
-      <p class="eyebrow">For UNC students without a car</p>
-      <h1 id="hero-title">Heading off campus? Someone is already going.</h1>
-      <p class="lede">Post the trip you are making. Students leaving at the same time can ride along, and the group splits one fare.</p>
-      <div class="actions">
-        <a class="btn" href="trips.html">See upcoming trips</a>
-        <a class="btn ghost" href="post.html">Post a trip</a>
-      </div>
-      <ul class="facts">
-        <li>Free to use</li>
-        <li>unc.edu email required</li>
-        <li>No drivers, no payments</li>
-      </ul>
+  <section class="wrap home-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">UNC students without a car</p>
+    <h1 id="hero-title">Share a ride to RDU, Southpoint, or Raleigh.</h1>
+    <p class="lede">Post a trip you are already making. Someone leaving at the same time can join, and you split the fare.</p>
+    <div class="actions">
+      <a class="btn" href="trips.html">Browse trips</a>
+      <a class="btn ghost" href="post.html">Post a trip</a>
     </div>
+    <p class="fine">Free. Needs a unc.edu email. We do not book drivers or take payments.</p>
+  </section>
 
-    <div class="hero-art reveal" aria-hidden="true">
-      <svg viewBox="0 0 520 400" role="img">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#CFE6F7"/>
-            <stop offset="1" stop-color="#F5F9FD"/>
-          </linearGradient>
-        </defs>
-        <rect width="520" height="400" rx="28" fill="url(#sky)"/>
-        <circle cx="430" cy="90" r="38" fill="#FFE7A3"/>
-        <!-- campus blocks -->
-        <rect x="40" y="170" width="70" height="120" rx="6" fill="#7BAFD4"/>
-        <rect x="58" y="190" width="14" height="16" fill="#F5F9FD"/>
-        <rect x="82" y="190" width="14" height="16" fill="#F5F9FD"/>
-        <rect x="58" y="220" width="14" height="16" fill="#F5F9FD"/>
-        <rect x="82" y="220" width="14" height="16" fill="#F5F9FD"/>
-        <rect x="130" y="130" width="92" height="160" rx="6" fill="#3A7CB8"/>
-        <rect x="150" y="155" width="16" height="18" fill="#F5F9FD"/>
-        <rect x="178" y="155" width="16" height="18" fill="#F5F9FD"/>
-        <rect x="150" y="190" width="16" height="18" fill="#F5F9FD"/>
-        <rect x="178" y="190" width="16" height="18" fill="#F5F9FD"/>
-        <rect x="360" y="180" width="110" height="110" rx="6" fill="#A9CDE8"/>
-        <!-- road -->
-        <path d="M0 300 Q 260 262 520 300 L520 400 L0 400 Z" fill="#17324F"/>
-        <path d="M0 300 Q 260 262 520 300" stroke="#FFE7A3" stroke-width="3" fill="none" stroke-dasharray="14 12"/>
-        <!-- route -->
-        <path class="route-line" d="M70 340 C 150 300, 200 360, 280 320 S 420 260, 470 220" fill="none" stroke="#3A7CB8" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/>
-        <!-- pins -->
-        <g transform="translate(70 340)">
-          <circle r="14" fill="#3A7CB8"/><circle r="5" fill="#F5F9FD"/>
-        </g>
-        <g class="pin-pop" transform="translate(470 220)">
-          <path d="M0 -36 C 16 -36, 22 -22, 22 -12 C 22 4, 0 22, 0 22 C 0 22, -22 4, -22 -12 C -22 -22, -16 -36, 0 -36 Z" fill="#0F1E38"/>
-          <circle cy="-14" r="7" fill="#FFE7A3"/>
-        </g>
-        <!-- a student with a bag -->
-        <g transform="translate(262 286)">
-          <circle cx="0" cy="-30" r="11" fill="#17324F"/>
-          <rect x="-9" y="-18" width="18" height="30" rx="8" fill="#3A7CB8"/>
-          <rect x="-22" y="-12" width="12" height="16" rx="3" fill="#FFE7A3"/>
-          <rect x="-7" y="12" width="6" height="16" fill="#17324F"/>
-          <rect x="2" y="12" width="6" height="16" fill="#17324F"/>
-        </g>
-        <!-- speech bubble -->
-        <g transform="translate(300 214)">
-          <rect x="0" y="0" width="124" height="44" rx="12" fill="#FFFFFF"/>
-          <path d="M18 44 L28 56 L34 44 Z" fill="#FFFFFF"/>
-          <text x="14" y="20" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#17324F">Leaving at 2:00?</text>
-          <text x="14" y="36" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#3A7CB8">Me too. Ride along.</text>
-        </g>
+  <section class="wrap example" aria-labelledby="example-title">
+    <h2 id="example-title" class="sr-only">Example</h2>
+    <figure class="route-fig">
+      <svg viewBox="0 0 640 120" role="img" aria-label="A route from campus to RDU airport with three riders">
+        <line x1="40" y1="60" x2="600" y2="60" stroke="#3A7CB8" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+        <circle cx="40" cy="60" r="9" fill="#3A7CB8"/>
+        <circle cx="300" cy="60" r="6" fill="#D3DDE8"/>
+        <circle cx="600" cy="60" r="11" fill="#17324F"/>
+        <text x="40" y="96" text-anchor="middle" font-family="Public Sans, Arial, sans-serif" font-size="14" fill="#17324F">Campus</text>
+        <text x="600" y="96" text-anchor="middle" font-family="Public Sans, Arial, sans-serif" font-size="14" fill="#17324F">RDU airport</text>
       </svg>
-    </div>
+      <figcaption>
+        A $40 solo ride, split three ways, is <strong>$13.33 each</strong>. Fares are your estimate. Check the app you use for the real price.
+      </figcaption>
+    </figure>
   </section>
 
-  <!-- Destinations marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
-      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
-    </div>
-  </div>
-
-  <!-- The problem, in numbers -->
-  <section class="wrap band" aria-labelledby="problem-title">
-    <div class="section-head reveal">
-      <h2 id="problem-title">Why this is hard without a car</h2>
-      <p class="muted">From our survey of 83 UNC students.</p>
-    </div>
-    <div class="stats">
-      <div class="stat reveal"><span class="num" data-count="85.5">85.5%</span><p>have tried to find a shared ride</p></div>
-      <div class="stat reveal"><span class="num" data-count="39.8">39.8%</span><p>skipped or changed a trip because of cost</p></div>
-      <div class="stat reveal"><span class="num" data-count="56.3">56.3%</span><p>of students with barriers cited mismatched timing</p></div>
-      <div class="stat reveal"><span class="num" data-count="91.9">91.9%</span><p>asked a friend first, not a group chat</p></div>
-    </div>
-    <p class="fine reveal">Among 64 respondents who named barriers. Survey denominators vary by question. See the FAQs for notes.</p>
-  </section>
-
-  <!-- How it works -->
-  <section class="wrap band" id="how" aria-labelledby="how-title">
-    <div class="section-head reveal">
-      <h2 id="how-title">How it works</h2>
-      <p class="muted">Three steps. Nobody pays us, and nobody books a driver.</p>
-    </div>
-    <ol class="steps-cards">
-      <li class="card reveal">
-        <span class="card-num">1</span>
-        <h3>Post a trip</h3>
-        <p>Where you are going, the area you leave from, the date, a leave-by time, and the solo fare you would pay.</p>
-      </li>
-      <li class="card reveal">
-        <span class="card-num">2</span>
-        <h3>Someone asks to join</h3>
-        <p>A student with a unc.edu address sends a ride-along request. You see their first name and the number of seats left.</p>
-      </li>
-      <li class="card reveal">
-        <span class="card-num">3</span>
-        <h3>Split the fare</h3>
-        <p>The exact pickup spot appears once they request. Everyone pays their share directly to the driver's app.</p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- Pickup reveal demo -->
-  <section class="wrap band reveal-split" aria-labelledby="reveal-title">
+  <section class="wrap split-row" aria-labelledby="next-title">
     <div>
-      <h2 id="reveal-title">The pickup spot shows up after a request</h2>
-      <p class="lede-sm">Only students who ask to ride see the exact meeting place. Everyone else sees the general area.</p>
-      <button id="reveal-btn" class="btn" type="button" aria-expanded="false" aria-controls="reveal-out">Try it: request to ride along</button>
+      <div class="section-head">
+        <h2 id="next-title">Next trips</h2>
+        <a href="trips.html">All trips</a>
+      </div>
+      <ul class="board" id="preview-list" aria-labelledby="next-title"></ul>
     </div>
-    <div class="reveal-card" id="reveal-out" aria-live="polite">
-      <p class="tag">Example trip</p>
-      <p class="dest">Southpoint mall</p>
-      <p class="from">From Ram's Head Recreation Center, Sat 2:00 PM</p>
-      <p class="meet muted" id="reveal-meet">Exact pickup: hidden until you request</p>
-    </div>
-  </section>
 
-  <!-- Fare splitter and next trips -->
-  <section class="wrap hero hero-sub" aria-labelledby="calc-title">
-    <form class="calc reveal" id="calc" aria-labelledby="calc-title">
+    <form class="calc" id="calc" aria-labelledby="calc-title">
       <h2 id="calc-title">Split a fare</h2>
       <div class="field">
         <div class="calc-row">
@@ -181,138 +83,14 @@
         </select>
       </div>
       <p class="calc-result" id="calc-out" aria-live="polite"></p>
-      <p class="fine">An estimate. Check Uber or Lyft for the real price at your time.</p>
+      <p class="fine">An estimate. Check the app you use for the real price.</p>
     </form>
-
-    <div class="reveal">
-      <div class="section-head">
-        <h2 id="preview-title">Next trips</h2>
-        <a href="trips.html">All trips</a>
-      </div>
-      <ul class="board" id="preview-list" aria-labelledby="preview-title"></ul>
-    </div>
   </section>
 
-  <!-- Features -->
-  <section class="wrap band" aria-labelledby="features-title">
-    <div class="section-head reveal">
-      <h2 id="features-title">Built for the way students actually travel</h2>
-    </div>
-    <div class="features">
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </span>
-        <h3>Departure windows</h3>
-        <p>Post a leave-by time and see who else is leaving around then, not a vague "sometime this week."</p>
-      </article>
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </span>
-        <h3>Clear cost split</h3>
-        <p>Every trip shows the solo fare and the per-person share before anyone asks to join.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="currentColor"/></svg>
-        </span>
-        <h3>Exact spot after a request</h3>
-        <p>The meeting place stays hidden until a student asks to ride, so posts do not reach strangers' doorsteps.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 9l8 5 8-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-        </span>
-        <h3>unc.edu only</h3>
-        <p>Posting and requesting need a unc.edu address. We check the domain only, so it is a first filter, not proof of identity.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M5 4h14v4H5zM5 10h14v4H5zM5 16h9v4H5z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-        </span>
-        <h3>Filter by destination</h3>
-        <p>RDU, Southpoint, Raleigh, Durham, Charlotte, or anything else. Filters stay on the same page.</p>
-      </article>
-      <article class="feature reveal">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </span>
-        <h3>Works on your phone</h3>
-        <p>Post and browse from a phone between classes. The layout adjusts to the screen you have.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Who it is for -->
-  <section class="wrap band persona-band" aria-labelledby="persona-title">
-    <div class="persona reveal">
-      <div class="avatar" aria-hidden="true">M</div>
-      <div>
-        <p class="eyebrow">Example user (illustrative, not a real person)</p>
-        <h2 id="persona-title">Maya, sophomore in Craige, needs a grocery run</h2>
-        <p class="lede-sm">Maya has no car and wants to get to Southpoint on Saturday. Her friends are going home for the weekend. She posts a 2:00 PM trip, two people ask to ride, and the split drops her cost to a few dollars.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research and testing -->
-  <section class="wrap band" aria-labelledby="research-title">
-    <div class="section-head reveal">
-      <h2 id="research-title">What we are testing next</h2>
-      <p class="muted">Status as of November 24.</p>
-    </div>
-    <div class="timeline">
-      <div class="milestone reveal">
-        <span class="dot done" aria-hidden="true"></span>
-        <h3>Survey</h3>
-        <p>83 UNC students answered questions about cost, timing, and who they ask for rides.</p>
-      </div>
-      <div class="milestone reveal">
-        <span class="dot" aria-hidden="true"></span>
-        <h3>Prototype test round 1</h3>
-        <p>10 or more UNC students post, find, and request a trip. Results go here after the round.</p>
-      </div>
-      <div class="milestone reveal">
-        <span class="dot" aria-hidden="true"></span>
-        <h3>Prototype test round 2</h3>
-        <p>Same tasks after changes, plus one question: would you ride with someone you do not know?</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section class="wrap band" aria-labelledby="team-title">
-    <div class="section-head reveal">
-      <h2 id="team-title">The team</h2>
-    </div>
-    <div class="team">
-      <article class="member reveal">
-        <div class="avatar" aria-hidden="true">H</div>
-        <h3>Hasvi Muriki</h3>
-        <p class="muted">Business and Data Science, UNC</p>
-      </article>
-      <article class="member reveal">
-        <div class="avatar" aria-hidden="true">?</div>
-        <h3>Teammate name</h3>
-        <p class="muted">Role on the team</p>
-      </article>
-      <article class="member reveal">
-        <div class="avatar" aria-hidden="true">?</div>
-        <h3>Teammate name</h3>
-        <p class="muted">Role on the team</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CTA band -->
-  <section class="wrap cta-band reveal" aria-labelledby="cta-title">
-    <h2 id="cta-title">Going somewhere this week?</h2>
-    <p>Post it in about a minute, or browse what is already on the board.</p>
-    <div class="actions">
-      <a class="btn" href="post.html">Post a trip</a>
-      <a class="btn ghost" href="trips.html">Browse trips</a>
-    </div>
+  <section class="wrap index-links" aria-label="More pages">
+    <a href="how.html"><span>How it works</span> The three steps, the survey, and what we are testing</a>
+    <a href="faq.html"><span>FAQs</span> Cost, safety, email, and privacy</a>
+    <a href="founders.html"><span>Know your founders</span> Who is building this, and how they ride</a>
   </section>
 
 </main>
@@ -321,7 +99,6 @@
   <div class="wrap foot">
     <p>Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</p>
     <nav aria-label="Footer">
-      <a href="faq.html">FAQs</a>
       <a href="faq.html#terms">Terms and support</a>
       <a href="faq.html#privacy">Privacy</a>
     </nav>
@@ -329,56 +106,5 @@
 </footer>
 
 <script src="app.js"></script>
-<script>
-  (function () {
-    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // Scroll reveal
-    var items = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window && !reduce) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.15 });
-      items.forEach(function (n) { io.observe(n); });
-    } else {
-      items.forEach(function (n) { n.classList.add("in"); });
-    }
-
-    // Count-up numbers
-    var nums = document.querySelectorAll(".num[data-count]");
-    if (!reduce && "IntersectionObserver" in window) {
-      var nio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          var el = e.target, end = parseFloat(el.getAttribute("data-count")), t0 = null, dur = 900;
-          function step(ts) {
-            if (!t0) t0 = ts;
-            var p = Math.min((ts - t0) / dur, 1);
-            el.textContent = (end * p).toFixed(1) + "%";
-            if (p < 1) requestAnimationFrame(step);
-          }
-          requestAnimationFrame(step);
-          nio.unobserve(el);
-        });
-      }, { threshold: 0.6 });
-      nums.forEach(function (n) { nio.observe(n); });
-    }
-
-    // Pickup reveal demo (prototype only, client-side)
-    var btn = document.getElementById("reveal-btn");
-    var meet = document.getElementById("reveal-meet");
-    if (btn && meet) {
-      btn.addEventListener("click", function () {
-        var open = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", String(!open));
-        btn.textContent = open ? "Try it: request to ride along" : "Request sent. Hide the demo";
-        meet.textContent = open ? "Exact pickup: hidden until you request" : "Exact pickup: Bus stop on South Road";
-        meet.className = open ? "meet muted" : "meet";
-      });
-    }
-  })();
-</script>
 </body>
 </html>

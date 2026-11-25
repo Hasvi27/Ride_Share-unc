@@ -1,4 +1,4 @@
-/* Shared behavior for every Ride Board page. Each block runs only if its elements exist on the current page. */
+/* Shared behavior for every Ride Share page. Each block runs only if its elements exist on the current page. */
 (function () {
   "use strict";
 

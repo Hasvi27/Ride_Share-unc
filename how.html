@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <title>How Ride Share works</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Ride Share</a>
+    <nav aria-label="Main">
+      <a href="trips.html">Trips</a>
+      <a href="post.html">Post a trip</a>
+      <a href="how.html" aria-current="page">How it works</a>
+      <a href="faq.html">FAQs</a>
+      <a href="founders.html">Know your founders</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap page-head">
+    <p class="eyebrow">How it works</p>
+    <h1>Three steps, no drivers, no payments.</h1>
+    <p class="lede">Ride Share is a board for trips students are already planning. We do not book rides or handle money.</p>
+  </section>
+
+  <section class="wrap band" aria-labelledby="steps-title">
+    <h2 id="steps-title" class="sec-title">The steps</h2>
+    <ol class="steps-plain">
+      <li>
+        <h3>Post the trip</h3>
+        <p>Destination, the area you leave from, the date, a leave-by time, the solo fare you expect, and how many seats you have.</p>
+      </li>
+      <li>
+        <h3>A student asks to ride along</h3>
+        <p>They need a unc.edu address. You see their first name and how many seats are left.</p>
+      </li>
+      <li>
+        <h3>Split the fare and go</h3>
+        <p>The exact pickup spot appears once they request. Each person pays their share directly, using whatever app or method the group agrees on.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap band reveal-split" aria-labelledby="reveal-title">
+    <div>
+      <h2 id="reveal-title" class="sec-title">The pickup spot shows after a request</h2>
+      <p class="lede-sm">Everyone sees the general area. The exact meeting place is only shown to students who ask to ride.</p>
+      <button id="reveal-btn" class="btn" type="button" aria-expanded="false" aria-controls="reveal-out">Try it: request to ride along</button>
+    </div>
+    <div class="reveal-card" id="reveal-out" aria-live="polite">
+      <p class="tag">Example trip</p>
+      <p class="dest">Southpoint mall</p>
+      <p class="from">From Ram's Head Recreation Center, Saturday 2:00 PM</p>
+      <p class="meet muted" id="reveal-meet">Exact pickup: hidden until you request</p>
+    </div>
+  </section>
+
+  <section class="wrap band" aria-labelledby="survey-title">
+    <h2 id="survey-title" class="sec-title">What the survey found</h2>
+    <p class="lede-sm">83 UNC students answered "Getting Around Without a Car at UNC." Question-level counts are in brackets because skip logic changed who answered what.</p>
+    <table class="data">
+      <thead>
+        <tr><th scope="col">Finding</th><th scope="col" class="r">Share</th><th scope="col" class="r">Count</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Have tried to find a shared ride</td><td class="r mono">85.5%</td><td class="r mono">71 of 83</td></tr>
+        <tr><td>Skipped or changed a trip because of cost</td><td class="r mono">39.8%</td><td class="r mono">50 of 83</td></tr>
+        <tr><td>Barrier: mismatched timing (among those who named barriers)</td><td class="r mono">56.3%</td><td class="r mono">36 of 64</td></tr>
+        <tr><td>Barrier: schedules not lining up</td><td class="r mono">51.6%</td><td class="r mono">33 of 64</td></tr>
+        <tr><td>Asked a friend directly for a ride</td><td class="r mono">91.9%</td><td class="r mono">68 of 74</td></tr>
+        <tr><td>Did not know who else was going</td><td class="r mono">37.5%</td><td class="r mono">24 of 64</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Some answers mixed per-person and total costs, and a few outliers were kept and flagged. Ask us before quoting a single number.</p>
+  </section>
+
+  <section class="wrap band" aria-labelledby="test-title">
+    <h2 id="test-title" class="sec-title">What we are testing next</h2>
+    <p class="lede-sm">Status as of November 24.</p>
+    <ul class="status-list">
+      <li><span class="state done">Done</span> Survey with 83 responses</li>
+      <li><span class="state">Not started</span> Prototype test round 1, with 10 or more UNC students</li>
+      <li><span class="state">Not started</span> Prototype test round 2, after changes, asking whether people would ride with someone they do not know</li>
+    </ul>
+    <p class="fine">Results will be added here after each round. Nothing on this page is a test result yet.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</p>
+    <nav aria-label="Footer">
+      <a href="faq.html#terms">Terms and support</a>
+      <a href="faq.html#privacy">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  (function () {
+    var btn = document.getElementById("reveal-btn");
+    var meet = document.getElementById("reveal-meet");
+    if (!btn || !meet) return;
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      btn.textContent = open ? "Try it: request to ride along" : "Request sent. Reset the demo";
+      meet.textContent = open ? "Exact pickup: hidden until you request" : "Exact pickup: Bus stop on South Road";
+      meet.className = open ? "meet muted" : "meet";
+    });
+  })();
+</script>
+</body>
+</html>

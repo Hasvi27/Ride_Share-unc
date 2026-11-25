@@ -1,4 +1,4 @@
-# Ride Board
+# Ride Share
 
 Static prototype for shared rides for UNC students. No build step.
 
