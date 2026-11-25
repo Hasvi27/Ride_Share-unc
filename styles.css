@@ -330,6 +330,8 @@ table.data .r { text-align: right; white-space: nowrap; }
 .closing .actions { margin-top: 20px; }
 .portrait { margin: 0; max-width: 300px; }
 .portrait img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 14px; display: block; }
+.portrait-initial { aspect-ratio: 3 / 4; border-radius: 14px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-size: 5rem; font-weight: 700; }
+.portrait-initial span { line-height: 1; }
 .story { min-width: 0; }
 .story h2 { font-size: clamp(1.6rem, 3vw, 2rem); }
 .story .meta { color: var(--muted); margin-top: 6px; }
