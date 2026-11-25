@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="claude:viewport-fit-sides" content="cover">
-  <title>Ride Share | Design sprint</title>
+  <meta name="description" content="Ride Share helps UNC students without cars find someone leaving at the same time, and split one fare.">
+  <title>Ride Share</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,123 +15,140 @@
 
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Ride Share</a>
+    <a class="brand" href="index.html" aria-current="page">Ride Share</a>
     <nav aria-label="Main">
       <a href="trips.html">Trips</a>
       <a href="post.html">Post a trip</a>
       <a href="how.html">How it works</a>
       <a href="faq.html">FAQs</a>
       <a href="founders.html">The crew</a>
-      <a href="index.html" aria-current="page">Stats</a>
+      <a href="stats.html">Stats</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="wrap page-head">
-    <p class="eyebrow">Design sprint, working notes</p>
-    <h1>Stats</h1>
-    <p class="lede">The problem work behind Ride Share: who we are designing for, what we are asking, and how we compare with the alternatives.</p>
-  </section>
-
-  <section class="wrap band" aria-labelledby="hmw-title">
-    <h2 id="hmw-title" class="sec-title">How might we</h2>
-    <ol class="hmw">
-      <li>How might we help students find rides?</li>
-      <li>How might we make off-campus transportation cheaper for students?</li>
-      <li>How might we verify that students are actually UNC students?</li>
-      <li>How might we make trying something new feel easier and more natural than sticking to old habits?</li>
-      <li>How might we meet people where they already are instead of asking them to adopt a brand-new routine?</li>
-    </ol>
-  </section>
-
-  <section class="wrap band" aria-labelledby="profile-title">
-    <h2 id="profile-title" class="sec-title">User profile</h2>
-    <dl class="kv">
-      <div>
-        <dt>Demographic</dt>
-        <dd>
-          UNC students who regularly need to travel off campus, conveniently and cheaply.
-          <ul>
-            <li>All students, across genders, freshman through senior.</li>
-            <li>Underclassmen are the most likely to lack a car on campus, so they are the core group.</li>
-          </ul>
-        </dd>
+  <section class="wrap home-hero home-hero-split" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">UNC students without a car</p>
+      <h1 id="hero-title">Share a ride to RDU, Southpoint, or Raleigh.</h1>
+      <p class="lede">Post a trip you are already making. Someone leaving at the same time can join, and you split the fare.</p>
+      <div class="actions">
+        <a class="btn" href="trips.html">Browse trips</a>
+        <a class="btn ghost" href="post.html">Post a trip</a>
       </div>
-      <div>
-        <dt>Psychographic</dt>
-        <dd>
-          Hypothesis: students are willing to ride with someone new when they see other UNC students on the board, a clear price, and a fixed meeting spot. Trust and low effort matter more than speed.
-        </dd>
-      </div>
-    </dl>
-  </section>
+      <p class="fine">Free. Needs a unc.edu email. We do not book drivers or take payments.</p>
+    </div>
 
-  <section class="wrap band" aria-labelledby="journey-title">
-    <h2 id="journey-title" class="sec-title">User journey</h2>
-    <p class="lede-sm">A UNC student without a car travels to RDU Airport for Thanksgiving break and wants to split an Uber or Lyft fare with students heading the same way.</p>
-    <ol class="journey">
-      <li><h3>Need</h3><p>Realizes they need transportation to RDU Airport.</p></li>
-      <li><h3>Search</h3><p>Checks GroupMe, asks friends, and looks for other students traveling that day.</p></li>
-      <li><h3>Compare</h3><p>Checks Uber and Lyft prices and considers splitting the fare.</p></li>
-      <li><h3>Match</h3><p>Opens the board and finds students leaving around the same time.</p></li>
-    </ol>
-  </section>
-
-  <section class="wrap band" aria-labelledby="empathy-title">
-    <h2 id="empathy-title" class="sec-title">Empathy map</h2>
-    <div class="empathy">
-      <div><h3>Says</h3><p>“Uber is too expensive when I’m traveling alone.” “I wish I knew who else was going to the airport.” “I’ve asked my friends, but nobody seems to be going at the same time.”</p></div>
-      <div><h3>Thinks</h3><p>“There must be other UNC students going to the same destination.” “I wonder if I can find someone with a similar departure time.” “Would I feel comfortable sharing a ride with someone I don’t know?”</p></div>
-      <div><h3>Does</h3><p>Checks GroupMe and other group chats. Messages friends about their travel plans. Compares Uber and Lyft prices. Sometimes changes or cancels plans because of transportation costs.</p></div>
-      <div><h3>Feels</h3><p>Frustrated by expensive transportation. Anxious about finding a ride at the right time. Uncertain about traveling with unfamiliar students. Relieved when someone shares the ride and the cost.</p></div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 400" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#CFE6F7"/>
+            <stop offset="1" stop-color="#F5F9FD"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="400" rx="28" fill="url(#sky)"/>
+        <circle cx="430" cy="90" r="38" fill="#FFE7A3"/>
+        <rect x="40" y="170" width="70" height="120" rx="6" fill="#7BAFD4"/>
+        <rect x="58" y="190" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="82" y="190" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="58" y="220" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="82" y="220" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="130" y="130" width="92" height="160" rx="6" fill="#3A7CB8"/>
+        <rect x="150" y="155" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="178" y="155" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="150" y="190" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="178" y="190" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="360" y="180" width="110" height="110" rx="6" fill="#A9CDE8"/>
+        <path d="M0 300 Q 260 262 520 300 L520 400 L0 400 Z" fill="#17324F"/>
+        <path d="M0 300 Q 260 262 520 300" stroke="#FFE7A3" stroke-width="3" fill="none" stroke-dasharray="14 12"/>
+        <path class="route-line" d="M70 340 C 150 300, 200 360, 280 320 S 420 260, 470 220" fill="none" stroke="#3A7CB8" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/>
+        <g transform="translate(70 340)">
+          <circle r="14" fill="#3A7CB8"/><circle r="5" fill="#F5F9FD"/>
+        </g>
+        <g class="pin-pop" transform="translate(470 220)">
+          <path d="M0 -36 C 16 -36, 22 -22, 22 -12 C 22 4, 0 22, 0 22 C 0 22, -22 4, -22 -12 C -22 -22, -16 -36, 0 -36 Z" fill="#0F1E38"/>
+          <circle cy="-14" r="7" fill="#FFE7A3"/>
+        </g>
+        <g transform="translate(262 286)">
+          <circle cx="0" cy="-30" r="11" fill="#17324F"/>
+          <rect x="-9" y="-18" width="18" height="30" rx="8" fill="#3A7CB8"/>
+          <rect x="-22" y="-12" width="12" height="16" rx="3" fill="#FFE7A3"/>
+          <rect x="-7" y="12" width="6" height="16" fill="#17324F"/>
+          <rect x="2" y="12" width="6" height="16" fill="#17324F"/>
+        </g>
+        <g transform="translate(192 180)">
+          <rect x="0" y="0" width="166" height="46" rx="12" fill="#FFFFFF"/>
+          <path d="M56 45 L66 60 L76 45 Z" fill="#FFFFFF"/>
+          <text x="14" y="19" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#17324F">Leaving at 2:00?</text>
+          <text x="14" y="36" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#3A7CB8">Me too. Ride along.</text>
+        </g>
+      </svg>
     </div>
   </section>
 
-  <section class="wrap band" aria-labelledby="eco-title">
-    <h2 id="eco-title" class="sec-title">Ecosystem map</h2>
-    <p class="lede-sm">Who is involved when a student tries to get a ride off campus today.</p>
-    <table class="data">
-      <thead>
-        <tr><th scope="col">Actor</th><th scope="col">What they do</th><th scope="col">Where Ride Share fits</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Students without cars</td><td>Need a trip, ask friends, check group chats</td><td>Post and join trips on one board</td></tr>
-        <tr><td>Friends and group chats (GroupMe, Instagram, WhatsApp)</td><td>Where most students ask first</td><td>Shows trips beyond the friend circle</td></tr>
-        <tr><td>Rideshare apps (Uber, Lyft)</td><td>Set the price students pay alone</td><td>We do not book rides; the group uses the app</td></tr>
-        <tr><td>Campus transportation and shuttles</td><td>Limited routes and hours</td><td>Not affected; a possible future partner</td></tr>
-        <tr><td>Students with cars</td><td>Sometimes drive friends</td><td>Could post trips and split the fare</td></tr>
-      </tbody>
-    </table>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
+      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
+    </div>
+  </div>
+
+  <section class="wrap example" aria-labelledby="example-title">
+    <h2 id="example-title" class="sr-only">Example</h2>
+    <figure class="route-fig">
+      <svg viewBox="0 0 640 120" role="img" aria-label="A route from campus to RDU airport with three riders">
+        <line x1="40" y1="60" x2="600" y2="60" stroke="#3A7CB8" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+        <circle cx="40" cy="60" r="9" fill="#3A7CB8"/>
+        <circle cx="300" cy="60" r="6" fill="#D3DDE8"/>
+        <circle cx="600" cy="60" r="11" fill="#17324F"/>
+        <text x="40" y="96" text-anchor="middle" font-family="Public Sans, Arial, sans-serif" font-size="14" fill="#17324F">Campus</text>
+        <text x="600" y="96" text-anchor="middle" font-family="Public Sans, Arial, sans-serif" font-size="14" fill="#17324F">RDU airport</text>
+      </svg>
+      <figcaption>
+        A $40 solo ride, split three ways, is <strong>$13.33 each</strong>. Fares are your estimate. Check the app you use for the real price.
+      </figcaption>
+    </figure>
   </section>
 
-  <section class="wrap band" aria-labelledby="alt-title">
-    <h2 id="alt-title" class="sec-title">Alternative solutions</h2>
-    <p class="lede-sm">Three alternatives we considered, next to the one we chose.</p>
-    <ol class="alts">
-      <li><h3>A. Ride board with departure windows (chosen)</h3><p>Students post a trip and see who else is leaving around the same time. The exact pickup spot appears after a request.</p></li>
-      <li><h3>B. Structured group chat process</h3><p>One pinned template per destination and week, posted at a fixed time in an existing group chat.</p></li>
-      <li><h3>C. Campus transit change</h3><p>Ask the university and student government for later and airport shuttles that match the same time windows.</p></li>
-    </ol>
-    <p class="fine">We also considered an AI matching agent (option D). We set it aside because calendar access is a privacy barrier and there is no matching data yet.</p>
+  <section class="wrap split-row" aria-labelledby="next-title">
+    <div>
+      <div class="section-head">
+        <h2 id="next-title">Next trips</h2>
+        <a href="trips.html">All trips</a>
+      </div>
+      <ul class="board" id="preview-list" aria-labelledby="next-title"></ul>
+    </div>
+
+    <form class="calc" id="calc" aria-labelledby="calc-title">
+      <h2 id="calc-title">Split a fare</h2>
+      <div class="field">
+        <div class="calc-row">
+          <label for="fare">Solo fare</label>
+          <output id="fare-out" class="mono" for="fare">$40</output>
+        </div>
+        <input type="range" id="fare" min="10" max="200" step="5" value="40">
+      </div>
+      <div class="field">
+        <label for="riders">People in the ride</label>
+        <select id="riders">
+          <option value="2">2 people</option>
+          <option value="3" selected>3 people</option>
+          <option value="4">4 people</option>
+        </select>
+      </div>
+      <p class="calc-result" id="calc-out" aria-live="polite"></p>
+      <p class="fine">An estimate. Check the app you use for the real price.</p>
+    </form>
   </section>
 
-  <section class="wrap band" aria-labelledby="compare-title">
-    <h2 id="compare-title" class="sec-title">Features comparison</h2>
-    <table class="data compare">
-      <thead>
-        <tr><th scope="col">Feature</th><th scope="col">A. Ride board</th><th scope="col">B. Group chat</th><th scope="col">C. Transit change</th><th scope="col">Uber Pool</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Departure time windows</td><td>Yes</td><td>Partly</td><td>No</td><td>No</td></tr>
-        <tr><td>Per-person cost shown before joining</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Exact pickup hidden until request</td><td>Yes</td><td>No</td><td>Not applicable</td><td>Sometimes</td></tr>
-        <tr><td>Reaches students beyond friends</td><td>Yes</td><td>Partly</td><td>Yes</td><td>Yes</td></tr>
-        <tr><td>Needs a shared database</td><td>Yes</td><td>No</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Depends on the university acting</td><td>No</td><td>No</td><td>Yes</td><td>No</td></tr>
-      </tbody>
-    </table>
+  <section class="wrap index-links" aria-label="More pages">
+    <a href="how.html"><span>How it works</span> The three steps, the survey, and what we are testing</a>
+    <a href="faq.html"><span>FAQs</span> Cost, safety, email, and privacy</a>
+    <a href="founders.html"><span>The crew</span> Who's in the car, and why they're building this</a>
+    <a href="stats.html"><span>Stats</span> The problem work: how we framed it, who it is for, and the alternatives</a>
   </section>
 
 </main>
