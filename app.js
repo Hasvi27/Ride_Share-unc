@@ -297,6 +297,5 @@
   state.trips = saved ? saved : examples();
   if (!saved) saveTrips();
   state.joined = loadJoined();
-  paintTheme();
   bindPage();
 })();
