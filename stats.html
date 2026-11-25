@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <title>Stats | Ride Share</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Ride Share</a>
+    <nav aria-label="Main">
+      <a href="trips.html">Trips</a>
+      <a href="post.html">Post a trip</a>
+      <a href="how.html">How it works</a>
+      <a href="faq.html">FAQs</a>
+      <a href="founders.html">The crew</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap page-head">
+    <p class="eyebrow">Design sprint, working notes</p>
+    <h1>Stats</h1>
+    <p class="lede">The problem work behind Ride Share: who we are designing for, what we are asking, and how we compare with the alternatives.</p>
+  </section>
+
+  <section class="wrap band" aria-labelledby="hmw-title">
+    <h2 id="hmw-title" class="sec-title">How might we</h2>
+    <ol class="hmw">
+      <li>How might we help students find rides?</li>
+      <li>How might we make off-campus transportation cheaper for students?</li>
+      <li>How might we verify that students are actually UNC students?</li>
+      <li>How might we make trying something new feel easier and more natural than sticking to old habits?</li>
+      <li>How might we meet people where they already are instead of asking them to adopt a brand-new routine?</li>
+    </ol>
+  </section>
+
+  <section class="wrap band" aria-labelledby="profile-title">
+    <h2 id="profile-title" class="sec-title">User profile</h2>
+    <dl class="kv">
+      <div>
+        <dt>Demographic</dt>
+        <dd>
+          UNC students who regularly need to travel off campus, conveniently and cheaply.
+          <ul>
+            <li>All students, across genders, freshman through senior.</li>
+            <li>Underclassmen are the most likely to lack a car on campus, so they are the core group.</li>
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt>Psychographic</dt>
+        <dd class="fill">[To be written. Values, habits, and what makes a student willing to ride with someone new.]</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="wrap band" aria-labelledby="journey-title">
+    <h2 id="journey-title" class="sec-title">User journey</h2>
+    <p class="lede-sm">The steps a student takes from wanting a trip to riding with someone.</p>
+    <ol class="journey">
+      <li><h3>Need</h3><p class="fill">[Trip comes up: a flight, a store run, a concert.]</p></li>
+      <li><h3>Search</h3><p class="fill">[Checks group chats and asks friends.]</p></li>
+      <li><h3>Price</h3><p class="fill">[Checks the rideshare app and the cost.]</p></li>
+      <li><h3>Match</h3><p class="fill">[Finds someone leaving at the same time, or does not.]</p></li>
+      <li><h3>Ride</h3><p class="fill">[Splits the fare and goes.]</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap band" aria-labelledby="empathy-title">
+    <h2 id="empathy-title" class="sec-title">Empathy map</h2>
+    <div class="empathy">
+      <div><h3>Says</h3><p class="fill">[Quotes from interviews]</p></div>
+      <div><h3>Thinks</h3><p class="fill">[Quotes from interviews]</p></div>
+      <div><h3>Does</h3><p class="fill">[What students actually do]</p></div>
+      <div><h3>Feels</h3><p class="fill">[Emotions around the trip]</p></div>
+    </div>
+  </section>
+
+  <section class="wrap band" aria-labelledby="eco-title">
+    <h2 id="eco-title" class="sec-title">Ecosystem map</h2>
+    <p class="lede-sm">Who is involved when a student tries to get a ride off campus today.</p>
+    <table class="data">
+      <thead>
+        <tr><th scope="col">Actor</th><th scope="col">What they do</th><th scope="col">Where Ride Share fits</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Students without cars</td><td>Need a trip, ask friends, check group chats</td><td>Post and join trips on one board</td></tr>
+        <tr><td>Friends and group chats (GroupMe, Instagram, WhatsApp)</td><td>Where most students ask first</td><td>Shows trips beyond the friend circle</td></tr>
+        <tr><td>Rideshare apps (Uber, Lyft)</td><td>Set the price students pay alone</td><td>We do not book rides; the group uses the app</td></tr>
+        <tr><td>Campus transportation and shuttles</td><td>Limited routes and hours</td><td>Not affected; a possible future partner</td></tr>
+        <tr><td>Students with cars</td><td>Sometimes drive friends</td><td>Could post trips and split the fare</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap band" aria-labelledby="alt-title">
+    <h2 id="alt-title" class="sec-title">Alternative solutions</h2>
+    <p class="lede-sm">Three alternatives we considered, next to the one we chose.</p>
+    <ol class="alts">
+      <li><h3>A. Ride board with departure windows (chosen)</h3><p>Students post a trip and see who else is leaving around the same time. The exact pickup spot appears after a request.</p></li>
+      <li><h3>B. Structured group chat process</h3><p>One pinned template per destination and week, posted at a fixed time in an existing group chat.</p></li>
+      <li><h3>C. Campus transit change</h3><p>Ask the university and student government for later and airport shuttles that match the same time windows.</p></li>
+    </ol>
+    <p class="fine">We also considered an AI matching agent (option D). We set it aside because calendar access is a privacy barrier and there is no matching data yet.</p>
+  </section>
+
+  <section class="wrap band" aria-labelledby="compare-title">
+    <h2 id="compare-title" class="sec-title">Features comparison</h2>
+    <p class="lede-sm">Team draft. Check these against what the team actually discussed before submitting.</p>
+    <table class="data compare">
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col">A. Ride board</th><th scope="col">B. Group chat</th><th scope="col">C. Transit change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Departure time windows</td><td>Yes</td><td>Partly</td><td>No</td></tr>
+        <tr><td>Per-person cost shown before joining</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>Exact pickup hidden until request</td><td>Yes</td><td>No</td><td>Not applicable</td></tr>
+        <tr><td>Reaches students beyond friends</td><td>Yes</td><td>Partly</td><td>Yes</td></tr>
+        <tr><td>Needs a shared database</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>Depends on the university acting</td><td>No</td><td>No</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>Prototype. Not affiliated with or endorsed by UNC-Chapel Hill.</p>
+    <nav aria-label="Footer">
+      <a href="faq.html#terms">Terms and support</a>
+      <a href="faq.html#privacy">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
