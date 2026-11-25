@@ -291,6 +291,10 @@ footer { padding-block: 32px 48px; border-top: 1px solid var(--line); color: var
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .home-hero { padding-block: 64px 36px; max-width: 760px; }
 .home-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin-top: 6px; }
+.home-hero-split { max-width: 1120px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.home-hero-split .hero-art svg { width: 100%; height: auto; display: block; }
+.home-hero-split .lede { max-width: 40ch; }
+@media (max-width: 860px) { .home-hero-split { grid-template-columns: 1fr; } }
 .home-hero .lede { max-width: 52ch; }
 .home-hero .fine { margin-top: 18px; }
 .example { padding-bottom: 8px; }

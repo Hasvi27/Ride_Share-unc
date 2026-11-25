@@ -28,16 +28,72 @@
 
 <main id="main">
 
-  <section class="wrap home-hero" aria-labelledby="hero-title">
-    <p class="eyebrow">UNC students without a car</p>
-    <h1 id="hero-title">Share a ride to RDU, Southpoint, or Raleigh.</h1>
-    <p class="lede">Post a trip you are already making. Someone leaving at the same time can join, and you split the fare.</p>
-    <div class="actions">
-      <a class="btn" href="trips.html">Browse trips</a>
-      <a class="btn ghost" href="post.html">Post a trip</a>
+  <section class="wrap home-hero home-hero-split" aria-labelledby="hero-title">
+    <div>
+      <p class="eyebrow">UNC students without a car</p>
+      <h1 id="hero-title">Share a ride to RDU, Southpoint, or Raleigh.</h1>
+      <p class="lede">Post a trip you are already making. Someone leaving at the same time can join, and you split the fare.</p>
+      <div class="actions">
+        <a class="btn" href="trips.html">Browse trips</a>
+        <a class="btn ghost" href="post.html">Post a trip</a>
+      </div>
+      <p class="fine">Free. Needs a unc.edu email. We do not book drivers or take payments.</p>
     </div>
-    <p class="fine">Free. Needs a unc.edu email. We do not book drivers or take payments.</p>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 520 400" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#CFE6F7"/>
+            <stop offset="1" stop-color="#F5F9FD"/>
+          </linearGradient>
+        </defs>
+        <rect width="520" height="400" rx="28" fill="url(#sky)"/>
+        <circle cx="430" cy="90" r="38" fill="#FFE7A3"/>
+        <rect x="40" y="170" width="70" height="120" rx="6" fill="#7BAFD4"/>
+        <rect x="58" y="190" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="82" y="190" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="58" y="220" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="82" y="220" width="14" height="16" fill="#F5F9FD"/>
+        <rect x="130" y="130" width="92" height="160" rx="6" fill="#3A7CB8"/>
+        <rect x="150" y="155" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="178" y="155" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="150" y="190" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="178" y="190" width="16" height="18" fill="#F5F9FD"/>
+        <rect x="360" y="180" width="110" height="110" rx="6" fill="#A9CDE8"/>
+        <path d="M0 300 Q 260 262 520 300 L520 400 L0 400 Z" fill="#17324F"/>
+        <path d="M0 300 Q 260 262 520 300" stroke="#FFE7A3" stroke-width="3" fill="none" stroke-dasharray="14 12"/>
+        <path class="route-line" d="M70 340 C 150 300, 200 360, 280 320 S 420 260, 470 220" fill="none" stroke="#3A7CB8" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12"/>
+        <g transform="translate(70 340)">
+          <circle r="14" fill="#3A7CB8"/><circle r="5" fill="#F5F9FD"/>
+        </g>
+        <g class="pin-pop" transform="translate(470 220)">
+          <path d="M0 -36 C 16 -36, 22 -22, 22 -12 C 22 4, 0 22, 0 22 C 0 22, -22 4, -22 -12 C -22 -22, -16 -36, 0 -36 Z" fill="#0F1E38"/>
+          <circle cy="-14" r="7" fill="#FFE7A3"/>
+        </g>
+        <g transform="translate(262 286)">
+          <circle cx="0" cy="-30" r="11" fill="#17324F"/>
+          <rect x="-9" y="-18" width="18" height="30" rx="8" fill="#3A7CB8"/>
+          <rect x="-22" y="-12" width="12" height="16" rx="3" fill="#FFE7A3"/>
+          <rect x="-7" y="12" width="6" height="16" fill="#17324F"/>
+          <rect x="2" y="12" width="6" height="16" fill="#17324F"/>
+        </g>
+        <g transform="translate(300 214)">
+          <rect x="0" y="0" width="124" height="44" rx="12" fill="#FFFFFF"/>
+          <path d="M18 44 L28 56 L34 44 Z" fill="#FFFFFF"/>
+          <text x="14" y="20" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#17324F">Leaving at 2:00?</text>
+          <text x="14" y="36" font-family="Public Sans, Arial, sans-serif" font-size="13" fill="#3A7CB8">Me too. Ride along.</text>
+        </g>
+      </svg>
+    </div>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
+      <span>RDU airport</span><span>Southpoint mall</span><span>Raleigh</span><span>Durham</span><span>Charlotte</span><span>Grocery runs</span><span>Concerts downtown</span>
+    </div>
+  </div>
 
   <section class="wrap example" aria-labelledby="example-title">
     <h2 id="example-title" class="sr-only">Example</h2>
